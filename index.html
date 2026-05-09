@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>浙江省2022—2024年城乡居民人均可支配收入分析</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.8;
+      color: #222;
+      background: #f5f7fb;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1f4e79, #5b9bd5);
+      color: #fff;
+      padding: 48px 36px;
+      border-radius: 18px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .hero h1 {
+      margin: 0 0 16px;
+      font-size: 32px;
+      line-height: 1.4;
+    }
+
+    .hero p {
+      margin: 0;
+      font-size: 17px;
+      opacity: 0.95;
+    }
+
+    .card {
+      background: #fff;
+      padding: 28px 32px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      color: #1f4e79;
+      margin-top: 0;
+      border-left: 6px solid #5b9bd5;
+      padding-left: 12px;
+    }
+
+    h3 {
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      background: #fff;
+    }
+
+    th, td {
+      border: 1px solid #d9e2ef;
+      padding: 10px 12px;
+      text-align: center;
+    }
+
+    th {
+      background: #eaf2fb;
+      color: #1f4e79;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .kpi {
+      background: #f8fbff;
+      border: 1px solid #d9e8f7;
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .kpi .label {
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .kpi .value {
+      color: #1f4e79;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 8px 10px 8px 0;
+      padding: 10px 16px;
+      background: #1f4e79;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+
+    .links a:hover {
+      background: #163a5c;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .image-card {
+      background: #fafafa;
+      border: 1px solid #e1e6ef;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .image-card img {
+      max-width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .note {
+      color: #555;
+      background: #fff8e6;
+      border-left: 5px solid #f0b429;
+      padding: 14px 18px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      color: #777;
+      margin-top: 32px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <h1>浙江省2022—2024年城乡居民人均可支配收入分析</h1>
+      <p>
+        本项目基于浙江省统计局统计年鉴数据，使用 Excel 和 MySQL 对浙江省全体居民、城镇常住居民和农村常住居民的人均可支配收入、城乡收入差距、收入倍差、收入结构和平均消费倾向进行分析。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>一、项目简介</h2>
+      <p>
+        本项目围绕浙江省2022—2024年城乡居民人均可支配收入展开，主要使用 Excel 完成数据整理、指标计算和 Dashboard 看板制作，并使用 MySQL 完成数据库建模、SQL 查询和分析验证。
+      </p>
+      <p>
+        项目重点分析居民收入增长趋势、城镇与农村居民收入差距、城乡收入倍差变化、收入来源结构以及居民平均消费倾向。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>二、核心指标</h2>
+      <div class="kpi-grid">
+        <div class="kpi">
+          <div class="label">2024年全体居民收入</div>
+          <div class="value">67,013元</div>
+        </div>
+        <div class="kpi">
+          <div class="label">2024年城镇居民收入</div>
+          <div class="value">78,251元</div>
+        </div>
+        <div class="kpi">
+          <div class="label">2024年农村居民收入</div>
+          <div class="value">42,786元</div>
+        </div>
+        <div class="kpi">
+          <div class="label">2024年城乡收入差距</div>
+          <div class="value">35,465元</div>
+        </div>
+        <div class="kpi">
+          <div class="label">2024年城乡收入倍差</div>
+          <div class="value">1.83倍</div>
+        </div>
+        <div class="kpi">
+          <div class="label">2024年全体居民平均消费倾向</div>
+          <div class="value">67.31%</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>三、主要数据</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>年份</th>
+            <th>全体居民收入</th>
+            <th>城镇居民收入</th>
+            <th>农村居民收入</th>
+            <th>城乡收入差距</th>
+            <th>城乡收入倍差</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2022</td>
+            <td>60,302元</td>
+            <td>71,268元</td>
+            <td>37,565元</td>
+            <td>33,703元</td>
+            <td>1.90</td>
+          </tr>
+          <tr>
+            <td>2023</td>
+            <td>63,830元</td>
+            <td>74,997元</td>
+            <td>40,311元</td>
+            <td>34,686元</td>
+            <td>1.86</td>
+          </tr>
+          <tr>
+            <td>2024</td>
+            <td>67,013元</td>
+            <td>78,251元</td>
+            <td>42,786元</td>
+            <td>35,465元</td>
+            <td>1.83</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>四、分析图表</h2>
+      <p>
+        以下图表来自 Excel Dashboard，用于展示收入趋势、城乡收入差距、城乡收入倍差、同比增长率和平均消费倾向。
+      </p>
+
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="images/城乡居民人均可支配收入趋势.png" alt="城乡居民人均可支配收入趋势">
+          <p>城乡居民人均可支配收入趋势</p>
+        </div>
+
+        <div class="image-card">
+          <img src="images/城乡收入差距.png" alt="城乡收入差距">
+          <p>城乡收入差距</p>
+        </div>
+
+        <div class="image-card">
+          <img src="images/城乡收入倍差变化趋势.png" alt="城乡收入倍差变化趋势">
+          <p>城乡收入倍差变化趋势</p>
+        </div>
+
+        <div class="image-card">
+          <img src="images/城镇与农村居民收入同比增长率对比.png" alt="城镇与农村居民收入同比增长率对比">
+          <p>城镇与农村居民收入同比增长率对比</p>
+        </div>
+
+        <div class="image-card">
+          <img src="images/城乡居民平均消费倾向对比.png" alt="城乡居民平均消费倾向对比">
+          <p>城乡居民平均消费倾向对比</p>
+        </div>
+      </div>
+
+      <p class="note">
+        注意：如果图片不能显示，请检查 images 文件夹中的图片文件名是否与 index.html 中的文件名完全一致。GitHub Pages 对路径和文件名大小写比较敏感。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>五、项目文件</h2>
+      <div class="links">
+        <a href="README.md">查看 README</a>
+        <a href="excel/zhejiang_income_analysis.xlsx">下载 Excel 分析文件</a>
+        <a href="sql/zhejiang_income_analysis_mysql.sql">查看 SQL 脚本</a>
+        <a href="project%20report/project%20report.doc">下载项目报告</a>
+        <a href="data/">查看原始数据</a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>六、主要结论</h2>
+      <p>
+        2022—2024年，浙江省全体居民、城镇常住居民和农村常住居民人均可支配收入均保持增长。城镇居民收入水平仍高于农村居民，但城乡收入倍差由2022年的1.90下降到2024年的1.83，说明城乡收入相对差距有所缩小。
+      </p>
+      <p>
+        从同比增长率看，农村居民收入增速连续高于城镇居民，是城乡收入倍差下降的重要原因。从消费倾向看，农村居民平均消费倾向高于城镇居民，说明农村居民生活消费支出占收入比例更高，收支结余空间相对较小。
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>七、项目不足与改进方向</h2>
+      <p>
+        当前项目核心数据时间范围为2022—2024年，属于近三年分析。如果后续需要扩展为“近五年”分析，需要继续补充2020年和2021年的对应数据。
+      </p>
+      <p>
+        后续可以进一步加入地区生产总值、人均GDP、城镇化率、就业数据等指标，也可以使用 Python、Power BI 或 Tableau 提升数据处理自动化和可视化效果。
+      </p>
+    </section>
+
+    <footer>
+      浙江省2022—2024年城乡居民人均可支配收入分析项目
+    </footer>
+
+  </div>
+</body>
+</html>
